@@ -16,12 +16,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$staffpassword = test_input($_POST["staffpassword"]);
 	$stmt = $conn->prepare("SELECT * FROM adminlogin");
 	$stmt->execute();
-	$staffusers = $stmt->fetchAll();
+	$users = $stmt->fetchAll();
 	
-	foreach($staffusers as $staffuser) {
+	foreach($users as $user) {
 		
-		if(($staffuser['staffusername'] == $staffusername) &&
-			($staffuser['staffpassword'] == $staffpassword)) {
+		if(($user['staffusername'] == $staffusername) &&
+			($user['staffpassword'] == $staffpassword)) {
 				header("location: adminpage.php");
 		}
 		else {

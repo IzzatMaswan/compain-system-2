@@ -10,6 +10,6 @@ session_destroy();
 
  
 // Redirect to login page
-header("location: index.php");
+header("location: stafflogin.php");
 exit;
 ?>

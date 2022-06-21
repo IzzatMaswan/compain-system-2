@@ -4,7 +4,7 @@ $conn = "";
 
 try {
 	$servername = "localhost";
-	$dbname = "complain system";
+	$dbname = "complain system 2";
 	$username = "root";
 	$password = "";
 

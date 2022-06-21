@@ -4,12 +4,12 @@ $conn = "";
 
 try {
 	$servername = "localhost";
-	$dbname = "geeksforgeeks";
+	$dbname = "complain system 2";
 	$username = "root";
 	$password = "";
 
 	$conn = new PDO(
-		"mysql:host=$servername; dbname=geeksforgeeks",
+		"mysql:host=$servername; dbname=complain system 2",
 		$username, $password
 	);
 	

@@ -1,12 +1,23 @@
 <?php
-define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_NAME', 'complain system');
 
-$link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
- 
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
+$conn = "";
+
+try {
+	$servername = "localhost";
+	$dbname = "geeksforgeeks";
+	$username = "root";
+	$password = "";
+
+	$conn = new PDO(
+		"mysql:host=$servername; dbname=geeksforgeeks",
+		$username, $password
+	);
+	
+$conn->setAttribute(PDO::ATTR_ERRMODE,
+					PDO::ERRMODE_EXCEPTION);
 }
+catch(PDOException $e) {
+	echo "Connection failed: " . $e->getMessage();
+}
+
 ?>

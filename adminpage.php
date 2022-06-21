@@ -12,7 +12,7 @@
     <h1 class="my-5">Hi Admin. Welcome to J&T complain sytem.</h1>
     <p>
         <p> Please state your complain in the form below, buat form pi compain dan check status or reply about complain </p>
-        <a href="logout.php" class="btn">Sign Out</a>
+        <a href="adminlogout.php" class="btn">Sign Out</a>
     </p>
 </body>
 </html>

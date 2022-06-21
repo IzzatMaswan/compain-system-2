@@ -9,12 +9,10 @@
     </style>
 </head>
 <body>
-    <h1 class="my-5">Hi Admin, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to J&T complain sytem.</h1>
+    <h1 class="my-5">Hi Admin. Welcome to J&T complain sytem.</h1>
     <p>
         <p> Please state your complain in the form below, buat form pi compain dan check status or reply about complain </p>
-        <a href="resetpassword.php" class="btn btn">Reset Your Password</a>
         <a href="logout.php" class="btn">Sign Out</a>
-        <a href="complainform.php" class="btn"> complain form</a>
     </p>
 </body>
 </html>

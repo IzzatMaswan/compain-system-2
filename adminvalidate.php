@@ -12,16 +12,16 @@ function test_input($data) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	
-	$username = test_input($_POST["staffusername"]);
-	$password = test_input($_POST["staffpassword"]);
+	$staffusername = test_input($_POST["staffusername"]);
+	$staffpassword = test_input($_POST["staffpassword"]);
 	$stmt = $conn->prepare("SELECT * FROM adminlogin");
 	$stmt->execute();
-	$users = $stmt->fetchAll();
+	$staffusers = $stmt->fetchAll();
 	
-	foreach($users as $user) {
+	foreach($staffusers as $staffuser) {
 		
-		if(($user['staffusername'] == $username) &&
-			($user['staffpassword'] == $password)) {
+		if(($staffuser['staffusername'] == $staffusername) &&
+			($staffuser['staffpassword'] == $staffpassword)) {
 				header("location: adminpage.php");
 		}
 		else {
